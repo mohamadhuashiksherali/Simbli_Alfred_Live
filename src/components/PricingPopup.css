@@ -1,0 +1,418 @@
+/* Main App Styles */
+.pricing-popup-trigger-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #46e59bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.pricing-popup-trigger-btn:hover {
+  background-color: #3dd68c;
+  transform: translateY(-1px);
+}
+
+/* Popup Overlay */
+.pricing-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 25000;
+  animation: pricing-popup-fade-in 0.3s ease-out;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Popup Container */
+.pricing-popup-container {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: fit-content;
+  max-height: auto;
+  padding: 48px 40px 40px 40px;
+  text-align: center;
+  position: relative;
+  animation: pricing-popup-slide-in 0.3s ease-out;
+  /* overflow-y: auto; */
+  margin: auto;
+}
+
+/* Close Button */
+.pricing-popup-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.pricing-popup-close-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Title */
+.pricing-popup-title {
+  font-size: 23px;
+  font-weight: 700;
+  color: #022c33;
+  margin: 0 0 4px 0;
+}
+
+/* Description */
+.pricing-popup-description {
+  font-size: 15px;
+  color: #585858;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pricing Plans Grid */
+.pricing-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Ensure three columns on larger screens */
+@media (min-width: 1024px) {
+  .pricing-plans-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Plan Card Base */
+.pricing-plan-card {
+  border: 1px solid #ededed;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pricing-plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #74df74;
+}
+
+/* Popular Plan Card */
+.pricing-plan-card-popular {
+  background-color: #ffffff;
+  border: 2px solid #74df74;
+  border-radius: 16px;
+  padding: 25px 15px 0px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: scale(1.05);
+}
+
+.pricing-plan-card-popular:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/* Popular Badge */
+.pricing-popular-badge {
+  position: absolute;
+  top: 8px;
+  left: 80%;
+  transform: translateX(-50%);
+  background-color: #ff7e22;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Plan Name */
+.pricing-plan-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 0px;
+}
+
+/* Plan Price */
+.pricing-plan-price {
+  font-size: 25px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 0px;
+}
+
+.pricing-plan-price-suffix {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.svg-ic {
+  margin-top: 1px;
+}
+
+/* Plan Description */
+.pricing-plan-desc {
+  font-size: 13px;
+  color: #212121;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Plan Button */
+.pricing-plan-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #74df74;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pricing-plan-btn:hover {
+  background-color: #74df74;
+  transform: translateY(-1px);
+}
+
+.pricing-plan-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pricing-plan-btn:disabled:hover {
+  background-color: #74df74;
+  transform: none;
+}
+
+/* More Details Section */
+.pricing-more-details-section {
+  border-top: 1px solid #919191;
+  padding-top: 20px;
+}
+
+.pricing-more-details-section2 {
+  /* border-top: 1px solid #919191; */
+  /* padding-top: 20px; */
+}
+
+.pricing-more-details-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #022c33;
+  margin: 0 0 15px 0;
+}
+
+.pricing-subscription-btn {
+  padding: 14px 50px;
+  background-color: #74df74;
+  color: #022c33;
+  border-top: none !important;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pricing-subscription-btn:hover {
+  background-color: #74df74;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes pricing-popup-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pricing-popup-slide-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .pricing-plans-grid {
+    /* grid-template-columns: 3fr; */
+    gap: 20px;
+  }
+
+  .pricing-plan-card-popular {
+    transform: scale(1);
+  }
+
+  .pricing-plan-card-popular:hover {
+    transform: translateY(-4px);
+  }
+
+  .pricing-plan-btn {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pricing-plans-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pricing-popup-overlay {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .pricing-popup-container {
+    padding: 32px 24px 24px 24px;
+    margin: 10px auto;
+    max-height: auto;
+    min-height: auto;
+  }
+
+  .pricing-popup-title {
+    font-size: 28px;
+  }
+
+  .pricing-popup-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-popup-overlay {
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .pricing-popup-container {
+    width: calc(100vw - 20px);
+    padding: 24px 20px 20px 20px;
+    margin: 5px auto;
+    max-height: auto;
+    border-radius: 12px;
+  }
+
+  .pricing-popup-title {
+    font-size: 24px;
+  }
+
+  .pricing-popup-description {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .pricing-plan-card,
+  .pricing-plan-card-popular {
+    padding: 24px 20px;
+  }
+
+  .pricing-plan-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .pricing-plans-grid {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pricing-popup-container {
+    padding: 20px 16px 16px 16px;
+    width: calc(100vw - 16px);
+    margin: 2px auto;
+    max-height: auto;
+  }
+
+  .pricing-popup-title {
+    font-size: 22px;
+  }
+
+  .pricing-plan-card,
+  .pricing-plan-card-popular {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-height: 600px) {
+  .pricing-popup-overlay {
+    align-items: flex-start;
+  }
+
+  .pricing-popup-container {
+    margin: 5px auto;
+    max-height: auto;
+
+  }
+}
+
+/* Payment processing spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

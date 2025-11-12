@@ -1,0 +1,477 @@
+/* 
+ * Standardized Font Sizes for Alfred Application
+ * This file standardizes font sizes across all pages while preserving existing class names
+ * 
+ * Font Size Hierarchy:
+ * - Heading One: 32px (main titles, h1 elements)
+ * - Content One: 16px (main content, paragraphs, body text)
+ * - Sub Content One: 14px (subtitles, secondary text, labels)
+ */
+
+/* ========================================
+   HEADING ONE FONT SIZE (32px)
+   ======================================== */
+
+/* Main page titles and primary headings */
+
+.card-number {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+.split-title,
+.onboard-title,
+.dashboard-title,
+.hero-txt,
+.jesica-text h1,
+.header-content h1,
+
+.Login_form-h6,
+.custom-dialog-title,
+.publish-screens {
+  font-size: 19px !important;
+  font-weight: 600;
+}
+
+/* Markdown content headings */
+.markdown-content h1 {
+  font-size: 32px !important;
+}
+h4 {
+  font-size: 20px;
+}
+
+/* ========================================
+   CONTENT ONE FONT SIZE (16px)
+   ======================================== */
+
+/* Main content paragraphs and body text */
+.split-subtitle,
+.onboard-subtitle,
+.dashboard-subtitle,
+.jesica-text p,
+.header-content p,
+.p,
+.content-area,
+.content-area p,
+.post-text,
+.card-label,
+.user-name,
+.user-title,
+.platform-name,
+.post-status,
+.status-label,
+.publish-post-p,
+.chats-text,
+.form-p,
+.Login_label,
+.custom-dialog-content p,
+.empty-message p,
+.drafts-text,
+.date-number,
+.day-name,
+.dashboard-post-time,
+.dashboard-draft-time,
+.time-indicator,
+.card-number,
+.date-range,
+.view-btn,
+.refresh-btn,
+.central-card-btn,
+.onboard-btn,
+.publish-btn,
+.schedule-btn,
+.save-btn,
+.cancel-btn,
+.hashtag-input,
+.more-hashtags,
+.hashtag-pill,
+.content-history,
+.clear-chat,
+.pen-edit,
+.cardslink,
+.not-connect,
+.btn-com,
+.btn-suggest,
+.pub-btns,
+.hash-tags,
+.cla-new,
+.opti-borer,
+.edit-btn-pre,
+.markdown-content p,
+.markdown-content li {
+  font-size: 16px;
+}
+
+/* ========================================
+   SUB CONTENT ONE FONT SIZE (14px)
+   ======================================== */
+
+/* Subtitles, secondary text, and labels */
+.post-time,
+.user-title,
+.platform-chars,
+.card-label,
+.Login_input-field,
+.change-time,
+.unsch-btn,
+.btn-suggest,
+.publish-post-p,
+.chats-text,
+.form-p,
+.Login_label,
+.custom-dialog-content p,
+.empty-message p,
+.drafts-text,
+.day-name,
+.dashboard-draft-time,
+.time-indicator,
+.view-btn,
+.refresh-btn,
+.central-card-btn,
+.onboard-btn,
+.publish-btn,
+.schedule-btn,
+.save-btn,
+.cancel-btn,
+.hashtag-input,
+.more-hashtags,
+.hashtag-pill,
+.content-history,
+.clear-chat,
+.pen-edit,
+.cardslink,
+.not-connect,
+.btn-com,
+.pub-btns,
+.hash-tags,
+.cla-new,
+.opti-borer,
+.edit-btn-pre,
+.markdown-content h2,
+.markdown-content h3 {
+  font-size: 14px !important;
+}
+.platform-card {
+  width: 136px;
+}
+.platform-cards {
+  overflow-x: auto;
+}
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+/* Mobile adjustments for better readability */
+@media (max-width: 768px) {
+  /* Heading One - slightly smaller on mobile */
+  .split-title,
+  .onboard-title,
+  .dashboard-title,
+  .hero-txt,
+  .jesica-text h1,
+  .header-content h1,
+  .Login_form-h6,
+  .custom-dialog-title,
+  .schedule-yours,
+  .all-sugges,
+  .publish-screens,
+  .markdown-content h1 {
+    font-size: 28px !important;
+  }
+
+  /* Content One - maintain readability */
+  .split-subtitle,
+  .onboard-subtitle,
+  .dashboard-subtitle,
+  .jesica-text p,
+  .header-content p,
+  .p,
+  .content-area,
+  .content-area p,
+  .post-text,
+  .card-label,
+  .user-name,
+  .user-title,
+  .platform-name,
+  .post-status,
+  .status-label,
+  .publish-post-p,
+  .chats-text,
+  .form-p,
+  .Login_label,
+  .custom-dialog-content p,
+  .empty-message p,
+  .drafts-text,
+  .date-number,
+  .day-name,
+  .dashboard-post-time,
+  .dashboard-draft-time,
+  .time-indicator,
+  .card-number,
+  .date-range,
+  .view-btn,
+  .refresh-btn,
+  .central-card-btn,
+  .onboard-btn,
+  .publish-btn,
+  .schedule-btn,
+  .save-btn,
+  .cancel-btn,
+  .hashtag-input,
+  .more-hashtags,
+  .hashtag-pill,
+  .content-history,
+  .clear-chat,
+  .pen-edit,
+  .cardslink,
+  .not-connect,
+  .btn-com,
+  .btn-suggest,
+  .pub-btns,
+  .hash-tags,
+  .cla-new,
+  .opti-borer,
+  .edit-btn-pre,
+  .markdown-content p,
+  .markdown-content li {
+    font-size: 15px;
+  }
+
+  /* Sub Content One - maintain hierarchy */
+  .post-time,
+  .user-title,
+  .platform-chars,
+  .card-label,
+  .Login_input-field,
+  .change-time,
+  .unsch-btn,
+  .btn-suggest,
+  .publish-post-p,
+  .chats-text,
+  .form-p,
+  .Login_label,
+  .custom-dialog-content p,
+  .empty-message p,
+  .drafts-text,
+  .day-name,
+  .dashboard-draft-time,
+  .time-indicator,
+  .view-btn,
+  .refresh-btn,
+  .central-card-btn,
+  .onboard-btn,
+  .publish-btn,
+  .schedule-btn,
+  .save-btn,
+  .cancel-btn,
+  .hashtag-input,
+  .more-hashtags,
+  .hashtag-pill,
+  .content-history,
+  .clear-chat,
+  .pen-edit,
+  .cardslink,
+  .not-connect,
+  .btn-com,
+  .pub-btns,
+  .hash-tags,
+  .cla-new,
+  .opti-borer,
+  .edit-btn-pre,
+  .markdown-content h2,
+  .markdown-content h3 {
+    font-size: 13px !important;
+  }
+}
+@media (max-width: 576px) {
+  .platform-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .robot-img {
+    height: 170px;
+  }
+  .image-controls {
+    padding: 3px 18px;
+  }
+}
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  /* Heading One - further reduced for small screens */
+  .split-title,
+  .onboard-title,
+  .dashboard-title,
+  .hero-txt,
+  .jesica-text h1,
+  .header-content h1,
+
+  .Login_form-h6,
+  .custom-dialog-title,
+  .schedule-yours,
+  .all-sugges,
+  .publish-screens,
+  .markdown-content h1 {
+    font-size: 16px !important;
+  }
+
+  /* Content One - maintain readability */
+  .split-subtitle,
+  .onboard-subtitle,
+  .dashboard-subtitle,
+  .jesica-text p,
+  .header-content p,
+  .p,
+  .content-area,
+  .content-area p,
+  .post-text,
+  .card-label,
+  .user-name,
+  .user-title,
+  .platform-name,
+  .post-status,
+  .status-label,
+  .publish-post-p,
+  .chats-text,
+  .form-p,
+  .Login_label,
+  .custom-dialog-content p,
+  .empty-message p,
+  .drafts-text,
+  .date-number,
+  .day-name,
+  .dashboard-post-time,
+  .dashboard-draft-time,
+  .time-indicator,
+  .card-number,
+  .date-range,
+  .view-btn,
+  .refresh-btn,
+  .central-card-btn,
+  .onboard-btn,
+  .publish-btn,
+  .schedule-btn,
+  .save-btn,
+  .cancel-btn,
+  .hashtag-input,
+  .more-hashtags,
+  .hashtag-pill,
+  .content-history,
+  .clear-chat,
+  .pen-edit,
+  .cardslink,
+  .not-connect,
+  .btn-com,
+  .btn-suggest,
+  .pub-btns,
+  .hash-tags,
+  .cla-new,
+  .opti-borer,
+  .edit-btn-pre,
+  .markdown-content p,
+  .markdown-content li {
+    font-size: 14px;
+  }
+
+  /* Sub Content One - maintain hierarchy */
+  .post-time,
+  .user-title,
+  .platform-chars,
+  .card-label,
+  .Login_input-field,
+  .change-time,
+  .unsch-btn,
+  .btn-suggest,
+  .publish-post-p,
+  .chats-text,
+  .form-p,
+  .Login_label,
+  .custom-dialog-content p,
+  .empty-message p,
+  .drafts-text,
+  .day-name,
+  .dashboard-draft-time,
+  .time-indicator,
+  .view-btn,
+  .refresh-btn,
+  .central-card-btn,
+  .onboard-btn,
+  .publish-btn,
+  .schedule-btn,
+  .save-btn,
+  .cancel-btn,
+  .hashtag-input,
+  .more-hashtags,
+  .hashtag-pill,
+  .content-history,
+  .clear-chat,
+  .pen-edit,
+  .cardslink,
+  .not-connect,
+  .btn-com,
+  .pub-btns,
+  .hash-tags,
+  .cla-new,
+  .opti-borer,
+  .edit-btn-pre,
+  .markdown-content h2,
+  .markdown-content h3 {
+    font-size: 12px !important;
+  }
+}
+
+/* ========================================
+   ADDITIONAL UTILITY CLASSES
+   ======================================== */
+
+/* Utility classes for consistent font sizing */
+.font-heading-one {
+  font-size: 32px !important;
+}
+
+.font-content-one {
+  font-size: 16px !important;
+}
+
+.font-subcontent-one {
+  font-size: 14px !important;
+}
+
+/* Mobile utility classes */
+@media (max-width: 768px) {
+  .font-heading-one {
+    font-size: 28px !important;
+  }
+
+  .font-content-one {
+    font-size: 15px !important;
+  }
+
+  .font-subcontent-one {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .font-heading-one {
+    font-size: 24px !important;
+  }
+
+  .font-content-one {
+    font-size: 14px !important;
+  }
+
+  .font-subcontent-one {
+    font-size: 12px !important;
+  }
+}
+
+.platform-card svg {
+  color: #000; /* default */
+}
+
+.platform-card.selected svg {
+  color: #fff; /* when selected */
+}
+
+.group:focus{
+  border: 1px solid #00c951 !important;
+}

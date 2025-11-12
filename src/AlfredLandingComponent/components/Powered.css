@@ -1,0 +1,393 @@
+/* Powered Section */
+.powered-section {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.powered-container {
+  /* max-width: 1200px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Powered Title */
+.powered-title {
+  font-size: 32px !important;
+  font-weight: 600;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+/* Powered Slider */
+.powered-slider {
+  width: 100%;
+  position: relative;
+}
+
+.powered-swiper {
+  width: 100%;
+  padding: 20px 0 60px 0;
+}
+.social-png{
+  /* width:40px; */
+  height:35px;
+  object-fit: contain;
+}
+/* Powered Card */
+.powered-card {
+  background: #F6F6F699;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.powered-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Powered Logo */
+.powered-logo {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.powered-logo svg {
+  transition: transform 0.3s ease;
+}
+
+.powered-card:hover .powered-logo svg {
+  transform: scale(1.1);
+}
+
+/* Powered Name */
+.powered-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F1F1F;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+/* Powered Category */
+.powered-category {
+  font-size: 15px;
+  font-weight: 400;
+  color: #717171;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Swiper Navigation */
+.powered-swiper .swiper-button-next,
+.powered-swiper .swiper-button-prev {
+  color: #000000;
+  background: #ffffff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+
+.powered-swiper .swiper-button-next:after,
+.powered-swiper .swiper-button-prev:after {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.powered-swiper .swiper-button-next {
+  right: 10px;
+}
+
+.powered-swiper .swiper-button-prev {
+  left: 10px;
+}
+
+/* Swiper Pagination */
+.powered-swiper .swiper-pagination {
+  display: none;
+  bottom: 20px;
+}
+
+.powered-swiper .swiper-pagination-bullet {
+
+  background: #cccccc;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.powered-swiper .swiper-pagination-bullet-active {
+  background: #000000;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .powered-container {
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  
+  .powered-title {
+    font-size: 28px !important;
+    margin-bottom: 50px;
+  }
+  
+  .powered-card {
+    height: 170px;
+    padding: 25px 18px;
+  }
+  
+  .powered-name {
+    font-size: 16px;
+  }
+  
+  .powered-category {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .powered-section {
+    padding: 60px 0;
+  }
+  
+  .powered-container {
+    padding: 0 20px;
+  }
+  
+ 
+  
+  .powered-swiper {
+    padding: 15px 0 50px 0;
+  }
+  
+  .powered-card {
+    height: 160px;
+    padding: 20px 15px;
+  }
+  
+  .powered-logo {
+    margin-bottom: 15px;
+    height: 45px;
+  }
+  
+  .powered-logo svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .powered-name {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  .powered-category {
+    font-size: 12px;
+  }
+  
+  .powered-swiper .swiper-button-next,
+  .powered-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .powered-swiper .swiper-button-next:after,
+  .powered-swiper .swiper-button-prev:after {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Swiper Navigation */
+.powered-swiper .swiper-button-next,
+.powered-swiper .swiper-button-prev {
+
+  width: 15px;
+  height: 15px;
+
+}
+
+
+
+.powered-swiper .swiper-button-next:after,
+.powered-swiper .swiper-button-prev:after {
+  font-size: 7px;
+  font-weight: 700;
+}
+
+  .powered-section {
+    padding: 50px 0;
+  }
+  
+  .powered-container {
+    padding: 0 16px;
+  }
+  
+ 
+  .powered-swiper {
+    padding: 10px 0 45px 0;
+  }
+  
+  .powered-card {
+    height: 150px;
+    padding: 18px 12px;
+  }
+  
+  .powered-logo {
+    margin-bottom: 12px;
+    height: 40px;
+  }
+  
+  .powered-logo svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .powered-name {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .powered-category {
+    font-size: 11px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .powered-section {
+    padding: 40px 0;
+  }
+  
+  .powered-container {
+    padding: 0 12px;
+  }
+  
+ 
+  
+  .powered-swiper {
+    padding: 8px 0 40px 0;
+  }
+  
+  .powered-card {
+    height: 140px;
+    padding: 15px 10px;
+  }
+  
+  .powered-logo {
+    margin-bottom: 10px;
+    height: 35px;
+  }
+  
+  .powered-logo svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .powered-name {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  
+  .powered-category {
+    font-size: 10px;
+  }
+  
+
+}
+
+@media (max-width: 360px) {
+  .powered-section {
+    padding: 35px 0;
+  }
+  
+  .powered-container {
+    padding: 0 10px;
+  }
+  
+  
+  
+  .powered-swiper {
+    padding: 5px 0 35px 0;
+  }
+  
+  .powered-card {
+    height: 130px;
+    padding: 12px 8px;
+  }
+  
+  .powered-logo {
+    margin-bottom: 8px;
+    height: 30px;
+  }
+  
+  .powered-logo svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .powered-name {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  
+  .powered-category {
+    font-size: 9px;
+  }
+  
+  
+}
+
+/* Hide navigation on very small screens */
+@media (max-width: 320px) {
+  .powered-swiper .swiper-button-next,
+  .powered-swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
+
+@media (min-width:600px) and  (max-width: 992px) {
+ 
+  .powered-title {
+    font-size: 30px !important;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:401px) and  (max-width: 599px) {
+ 
+   .powered-title {
+    font-size: 30px !important;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width:400px){
+ 
+
+   .powered-title {
+    font-size: 24px !important;
+    margin-bottom: 40px;
+  }
+}

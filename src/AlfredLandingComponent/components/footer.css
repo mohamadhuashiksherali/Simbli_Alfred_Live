@@ -1,0 +1,328 @@
+/* #root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+} */
+/* Footer Styles - Exact match to image */
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 60px 0 0px 0;
+
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Company Branding Section */
+.branding-section {
+  max-width: 300px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #4ade80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+
+}
+
+.company-description {
+  color: #d5d5d5;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 15px !important;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+/* Section Titles */
+.section-title1 {
+   background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.5px;
+  margin-top: 0;
+
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+
+}
+
+.footer-link {
+  color: #d5d5d5;
+  text-decoration: none;
+  font-size: 16px !important;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+/* Get Started Section */
+.get-started-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.waitlist-button {
+  background-color: white;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.waitlist-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.waitlist-button:active {
+  transform: translateY(0);
+}
+
+/* Copyright Section */
+.copyright-section {
+  margin-top: 40px;
+  padding: 15px;
+  text-align: center;
+  background-color: #0f0f0f;
+}
+
+.copyright-text {
+  color: #666666;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 400;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .branding-section {
+    max-width: none;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .get-started-section {
+    align-items: center;
+  }
+  .logo-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #4ade80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 20px 0;
+  }
+
+  .footer-container {
+    padding: 0 15px;
+    gap: 25px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .company-description {
+    font-size: 13px;
+  }
+
+  .waitlist-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Email Input Field Styles */
+.email-input-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  padding: 0px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+}
+
+.email-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #374151;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.email-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.email-send-button {
+  background: #50c26b;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  min-width: 35px;
+  height: 35px;
+  margin-right: 1%;
+}
+
+.email-send-button:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.email-send-button:active {
+  transform: translateY(0);
+}
+
+.email-send-button svg {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments for email input */
+@media (max-width: 768px) {
+  .email-input-container {
+    max-width: 100%;
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-input-container {
+    margin: 15px auto 0;
+  }
+
+  .email-input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .email-send-button {
+    padding: 10px;
+    min-width: 40px;
+    height: 40px;
+  }
+
+  .email-send-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+.back-to-top-button-text{
+  border:1px solid #ffffff !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-top: 19px;
+}

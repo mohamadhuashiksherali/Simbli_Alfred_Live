@@ -1,0 +1,285 @@
+/* Cancellation Popup Overlay */
+.cancellation-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Cancellation Popup Container */
+.cancellation-popup-container {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 24px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 96vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Close Button */
+.cancellation-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  color: #6B7280;
+  transition: all 0.2s ease;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancellation-popup-close:hover {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+/* Header Section */
+.cancellation-popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancellation-popup-sad-icon {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.cancellation-popup-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #022C33;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.cancellation-popup-subtitle {
+  font-size: 12px;
+  color: #585858;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Reasons Grid */
+.cancellation-reasons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.cancellation-reason-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: #F7F9FB;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-size: 13px;
+  color: #111827;
+  font-weight: 400;
+}
+
+.cancellation-reason-item:hover {
+  background: #F3F4F6;
+  border-color: #D1D5DB;
+}
+
+.cancellation-reason-item.selected {
+  background: #5FCD5F;
+  color: #111827;
+}
+
+.cancellation-reason-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #6B7280;
+}
+
+.cancellation-reason-item.selected .cancellation-reason-icon {
+  color: #28A745;
+}
+
+.cancellation-reason-text {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.3;
+  color:#000000;
+}
+
+/* Comment Section */
+.cancellation-comment-section {
+  margin-bottom: 16px;
+}
+
+.cancellation-comment-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #111827;
+  background: white;
+  transition: border-color 0.2s ease;
+  min-height: 80px;
+  max-height: 350px;
+  resize: vertical;
+  overflow-y: auto;
+}
+
+/* Thin green scrollbar for textarea */
+.cancellation-comment-input::-webkit-scrollbar {
+  width: 3px;
+}
+
+.cancellation-comment-input::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cancellation-comment-input::-webkit-scrollbar-thumb {
+  background: #28A745;
+  border-radius: 2px;
+}
+
+.cancellation-comment-input::-webkit-scrollbar-thumb:hover {
+  background: #218838;
+}
+
+/* Firefox scrollbar */
+.cancellation-comment-input {
+  scrollbar-width: thin;
+  scrollbar-color: #28A745 transparent;
+}
+
+.cancellation-comment-input:focus {
+  outline: none;
+  border-color: #28A745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.cancellation-comment-input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Action Buttons */
+.cancellation-popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cancellation-continue-btn {
+   background: linear-gradient(90deg, #7DDD7D 0%, #54C754 99.99%);
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.cancellation-continue-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.cancellation-continue-btn:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancellation-support-btn {
+  background: white;
+  color: #28A745;
+  border: 1px solid #28A745;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.cancellation-support-btn:hover {
+  background: #F0F9F0;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .cancellation-popup-container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .cancellation-reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .cancellation-popup-title {
+    font-size: 16px;
+  }
+  
+  .cancellation-reason-item {
+    padding: 10px 12px;
+  }
+  
+  .cancellation-reason-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cancellation-popup-overlay {
+    padding: 10px;
+  }
+  
+  .cancellation-popup-container {
+    padding: 16px;
+  }
+  
+  .cancellation-popup-title {
+    font-size: 15px;
+  }
+  
+  .cancellation-popup-subtitle {
+    font-size: 11px;
+  }
+}
+.expen-svg{
+  width:19px;
+  height:15px;
+}

@@ -1,0 +1,249 @@
+/* Billing History Styles - Matching the design from image */
+
+.billing-history-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.billing-history-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+
+}
+
+.billing-history-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.billing-history-table {
+  width: 100%;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 16px 35px;
+}
+
+.header-cell {
+  font-weight: 500;
+  color: #6c757d;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.table-body {
+  background: white;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 16px 35px;
+  border-bottom: 1px solid #f1f3f4;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+/* Payment Method Styling */
+.payment-method {
+  gap: 0.75rem;
+}
+
+.payment-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.payment-icon.subscription-paid {
+  background-color: #28a745;
+}
+
+.payment-icon.subscription-failed {
+  background-color: #dc3545;
+}
+
+.payment-icon.topup-paid {
+  background-color: #fd7e14;
+}
+
+.payment-icon.payment-failed {
+  background-color: #dc3545;
+}
+
+.payment-icon.refund-issued {
+  background-color: #007bff;
+}
+
+.payment-icon.default {
+  background-color: #6c757d;
+}
+
+.payment-text {
+  font-weight: 400;
+  color: #333;
+}
+
+/* Date Styling */
+.date {
+  color: #666;
+  font-weight: 400;
+}
+
+/* Amount Styling */
+.amount {
+  font-weight: 600;
+  color: #333;
+  justify-content: flex-end;
+}
+
+/* Status Badge Styling */
+.status {
+  justify-content: flex-end;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.status-paid {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-badge.status-failed {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status-badge.status-refunded {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.status-badge.status-pending {
+  background-color: #6c757d;
+  color: white;
+}
+
+.status-badge.status-default {
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+
+/* Loading and Error States */
+.loading-state,
+.error-state,
+.empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+.error-state {
+  color: #dc3545;
+}
+
+.empty-state {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .billing-history-container {
+    padding: 1rem;
+  }
+  
+  .billing-history-title {
+    font-size: 1.5rem;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 16px 35px;
+  }
+  
+  /* .header-cell {
+    display: none;
+  } */
+  
+  .table-cell {
+    justify-content: flex-start;
+  }
+  
+  .table-cell::before {
+    /* content: attr(data-label); */
+    font-weight: 600;
+    color: #6c757d;
+    margin-right: 0.5rem;
+    min-width: 100px;
+  }
+  
+  /* .payment-method::before {
+    content: "Payment Method: ";
+  } */
+  
+  /* .date::before {
+    content: "Date: ";
+  } */
+  
+  /* .amount::before {
+    content: "Amount: ";
+  } */
+  
+  /* .status::before {
+    content: "Status: ";
+  } */
+}
+
+/* Animation for smooth loading */
+.table-row {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

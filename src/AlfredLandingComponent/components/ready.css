@@ -1,0 +1,112 @@
+.ready-banner{
+    background: linear-gradient(276.95deg, #51C36C 0.79%, #1D6850 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ready-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ready-txt h5{
+    color:#FFFFFF;
+    font-size: 60px !important;
+    font-weight: 600;
+     text-align: center;
+    
+}
+.ready-txt p{
+    color:#FFFFFF;
+    font-size: 20px;
+    font-weight: 400; 
+    text-align: center;
+    
+}
+.ready-card-over{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ready-txt-per h6{
+    color:#FFFFFF;
+    font-size: 41px !important;
+    font-weight: 600;
+    text-align: center; 
+}
+.ready-txt-per p{
+    color:#FFFFFF;
+    font-size:16px !important;
+    font-weight: 300; 
+    text-align: center;
+}
+.ready-cardss{
+    width:45px;
+    height:45px;
+}
+.ready-cardss1{
+    width:40px;
+    height:40px;
+}
+
+
+
+@media (max-width: 1090px) {
+
+
+}
+@media (max-width: 992px) {
+
+
+  
+}
+
+@media (max-width: 620px) {
+.ready-txt h5 {
+    font-size: 30px;
+}
+.ready-txt-per h6 {
+    font-size: 30px;
+}
+.ready-txt-per h6{
+   margin-top: 10px;
+}
+  
+}
+@media (max-width:399px) {
+
+}
+
+
+
+@media (min-width:401px) and  (max-width: 599px) {
+ 
+ .ready-txt h5{
+ 
+    font-size: 30px !important;
+    
+    
+}
+    .ready-txt-per h6 {
+        font-size: 30px !important;
+    }
+        .alfred-btn-primary {
+        font-size: 13px !important;
+    }
+}
+@media (max-width:400px){
+ 
+.ready-txt h5{
+    font-size: 24px !important;
+  
+    
+}
+    .ready-txt-per h6 {
+        font-size: 24px !important;
+    }
+        .alfred-btn-primary {
+        font-size: 13px !important;
+    }
+ 
+}

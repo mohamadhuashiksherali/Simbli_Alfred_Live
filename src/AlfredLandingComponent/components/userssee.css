@@ -1,0 +1,126 @@
+.testimonal-card{
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  height:350px;
+
+}
+.testimonal-back{
+  background-image: url("../assets/images/test-back.png");
+  width:100%;
+  background-size: cover !important;
+
+}
+.testimonal-text-txt h6{
+  font-size: 35px !important;
+  font-weight: 700;
+  color:#FFFFFF;
+  text-align: center;
+}
+.testimonal-text-txt p{
+  font-size: 17px;
+  font-weight: 400;
+  color:#FFFFFF;
+  text-align: center;
+}
+.avatar{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  background-color: #FF48D1;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 600;
+}
+.avatar1{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  background-color: #357CFF;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 600;
+}
+.review{
+  gap:2px;
+}
+.testimonal-txt h5{
+  font-size: 19px;
+  font-weight: 600;
+  color:#000000;
+}
+.testimonal-txt p{
+  color:#676767;
+  font-size: 14px;
+}
+.testimonal-txt h6{
+  color:#000000;
+  font-size: 16px;
+   font-weight: 400;
+}
+
+/* Owl Carousel Pagination Dots */
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 10%;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #666666;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  background-color: #FFFFFF !important;
+  transform: scale(1.2);
+}
+
+.owl-carousel .owl-dots .owl-dot:hover {
+  background-color: #B0B0B0;
+}
+@media (max-width:992px) {
+  .testimonal-text-txt h6 {
+    font-size: 27px;
+}
+}
+@media (max-width:600px) {
+ 
+.testimonal-text-txt h6 {
+    font-size: 25px !important;
+
+}
+.testimonal-text-txt p {
+    font-size: 14px;
+
+}
+}
+@media (min-width:600px) and  (max-width: 992px) {
+ 
+     .testimonal-text-txt h6 {
+        font-size: 25px !important;
+    }
+}
+
+@media (min-width:401px) and  (max-width: 599px) {
+ 
+      .testimonal-text-txt h6 {
+        font-size: 30 !important;
+    }
+}
+@media (max-width:400px){
+ 
+
+     .testimonal-text-txt h6 {
+        font-size: 24px !important;  
+    }
+}

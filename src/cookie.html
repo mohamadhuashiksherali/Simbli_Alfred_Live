@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+/* --- Banner --- */
+.cookie-banner {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: #1e1e1e;
+  color: #f1f1f1;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 20px 24px;
+  z-index: 1000;
+
+  display: none;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.cookie-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cookie-text h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cookie-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ccc;
+  margin: 0;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn.accept { background: #007bff; color: #fff; }
+.btn.reject { background: #444; color: #fff; }
+.btn.manage { background: transparent; border: 1px solid #777; color: #ddd; }
+.btn:hover { opacity: 0.9; }
+
+/* --- Modal --- */
+.prefs-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.prefs-box {
+  background: #2a2a2a;
+  color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.4s ease forwards;
+}
+.prefs-box h3 {
+  margin-top: 0;
+}
+.prefs-options {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Toggle switches */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: #555;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 16px; height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.switch input:checked + .slider {
+  background: #007bff;
+}
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+.label-text {
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Modal buttons */
+.modal-actions {
+  text-align: right;
+}
+.btn.save { background: #007bff; color: #fff; }
+.btn.cancel { background: #444; color: #fff; margin-left: 8px; }
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+  </style>
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <h3>We value your privacy 🍪</h3>
+      <p>
+        We use cookies to enhance your browsing experience, analyze site traffic, and
+        serve personalized content. You can accept all, reject all, or manage your preferences.
+      </p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn accept" id="accept-all">Accept All</button>
+      <button class="btn reject" id="reject-all">Reject All</button>
+      <button class="btn manage" id="manage-prefs">Manage Preferences</button>
+    </div>
+  </div>
+</div>
+
+<!-- Preferences Modal -->
+<div id="prefs-modal" class="prefs-modal">
+  <div class="prefs-box">
+    <h3>Manage Cookie Preferences</h3>
+    <p>Customize which cookies you want to allow:</p>
+    <div class="prefs-options">
+      <label class="switch">
+        <input type="checkbox" disabled checked>
+        <span class="slider"></span>
+        <span class="label-text">Necessary (always enabled)</span>
+      </label>
+      <label class="switch">
+        <input type="checkbox" id="analytics">
+        <span class="slider"></span>
+        <span class="label-text">Analytics</span>
+      </label>
+      <label class="switch">
+        <input type="checkbox" id="marketing">
+        <span class="slider"></span>
+        <span class="label-text">Marketing</span>
+      </label>
+    </div>
+    <div class="modal-actions">
+      <button class="btn save" id="save-prefs">Save Preferences</button>
+      <button class="btn cancel" id="close-prefs">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const banner = document.getElementById('cookie-banner');
+  const modal = document.getElementById('prefs-modal');
+  const acceptBtn = document.getElementById('accept-all');
+  const rejectBtn = document.getElementById('reject-all');
+  const manageBtn = document.getElementById('manage-prefs');
+  const saveBtn = document.getElementById('save-prefs');
+  const closeBtn = document.getElementById('close-prefs');
+  const analytics = document.getElementById('analytics');
+  const marketing = document.getElementById('marketing');
+
+  const prefs = localStorage.getItem('cookiePrefs');
+  if (!prefs) banner.style.display = 'block';
+  else applyPrefs(JSON.parse(prefs));
+
+  acceptBtn.onclick = () => savePrefs({ analytics: true, marketing: true });
+  rejectBtn.onclick = () => savePrefs({ analytics: false, marketing: false });
+  manageBtn.onclick = () => {
+    modal.style.display = 'flex';
+    const existing = JSON.parse(localStorage.getItem('cookiePrefs') || '{}');
+    analytics.checked = existing.analytics || false;
+    marketing.checked = existing.marketing || false;
+  };
+  closeBtn.onclick = () => modal.style.display = 'none';
+  saveBtn.onclick = () => savePrefs({ analytics: analytics.checked, marketing: marketing.checked });
+
+  function savePrefs(prefs) {
+    localStorage.setItem('cookiePrefs', JSON.stringify(prefs));
+    banner.style.display = 'none';
+    modal.style.display = 'none';
+    applyPrefs(prefs);
+  }
+
+  function applyPrefs(prefs) {
+    // Example usage: load scripts conditionally
+    if (prefs.analytics) console.log("Analytics cookies enabled");
+    if (prefs.marketing) console.log("Marketing cookies enabled");
+  }
+});
+</script>
+
+</html>

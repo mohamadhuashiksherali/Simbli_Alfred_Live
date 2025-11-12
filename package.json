@@ -1,0 +1,53 @@
+{
+  "name": "simbli-content-creation",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@tailwindcss/vite": "^4.1.12",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.8",
+    "canvas-confetti": "^1.9.3",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.5",
+    "jwt-decode": "^4.0.0",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.294.0",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.0",
+    "owl.carousel": "^2.3.4",
+    "razorpay": "^2.9.6",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "react-image-crop": "^11.0.10",
+    "react-router-dom": "^6.20.1",
+    "sweetalert2": "^11.23.0",
+    "swiper": "^12.0.2",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss": "^4.1.12",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.2",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.5"
+  }
+}

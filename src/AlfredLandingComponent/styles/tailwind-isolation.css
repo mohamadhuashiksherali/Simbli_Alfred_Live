@@ -1,0 +1,123 @@
+/* CSS Isolation for AlfredLandingComponent - Prevents Tailwind from affecting this component */
+
+.alfred-landing-isolation {
+  /* Create a new stacking context to isolate from Tailwind */
+  isolation: isolate;
+  
+  /* Ensure proper box model */
+  box-sizing: border-box;
+  
+  /* Basic layout properties */
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  
+  /* Reset only the most problematic Tailwind utilities */
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  /* Allow all other styles to work normally - including typography.css and font-sizes.css */
+  background: transparent;
+  border: none;
+  color: inherit;
+
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  position: static;
+  overflow: visible;
+  z-index: auto;
+  transform: none;
+  transition: none;
+  opacity: 1;
+  visibility: visible;
+  
+  /* Allow AlfredLandingComponent to use its own font styling */
+}
+
+/* Ensure all child elements inherit proper box-sizing */
+.alfred-landing-isolation *,
+.alfred-landing-isolation *::before,
+.alfred-landing-isolation *::after {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling behavior for this component only */
+.alfred-landing-isolation {
+  scroll-behavior: smooth;
+}
+
+/* Preserve the original AlfredLanding styles */
+.alfred-landing-isolation .alfred-landing {
+  min-height: 100vh;
+  /* background: #f8fafc; */
+}
+
+/* AlfredLandingComponent will use its own CSS without typography interference */
+
+/* Container styles for this component only */
+.alfred-landing-isolation .container {
+  max-width: 1200px;
+
+}
+
+
+.alfred-landing-isolation .bg-white { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-50 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-100 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-200 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-300 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-400 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-500 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-600 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-700 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-800 { background-color: transparent !important; }
+.alfred-landing-isolation .bg-gray-900 { background-color: transparent !important; }
+
+
+
+/* Allow typography.css and font-sizes.css to work - don't override font weights */
+
+/* Allow typography.css and font-sizes.css to work - don't override font sizes */
+
+.alfred-landing-isolation .p-0 { padding: 0 !important; }
+.alfred-landing-isolation .p-1 { padding: 0 !important; }
+.alfred-landing-isolation .p-2 { padding: 0 !important; }
+.alfred-landing-isolation .p-3 { padding: 0 !important; }
+.alfred-landing-isolation .p-4 { padding: 0 !important; }
+.alfred-landing-isolation .p-5 { padding: 0 !important; }
+.alfred-landing-isolation .p-6 { padding: 0 !important; }
+.alfred-landing-isolation .p-8 { padding: 0 !important; }
+.alfred-landing-isolation .p-10 { padding: 0 !important; }
+.alfred-landing-isolation .p-12 { padding: 0 !important; }
+.alfred-landing-isolation .p-16 { padding: 0 !important; }
+.alfred-landing-isolation .p-20 { padding: 0 !important; }
+.alfred-landing-isolation .p-24 { padding: 0 !important; }
+.alfred-landing-isolation .p-32 { padding: 0 !important; }
+
+.alfred-landing-isolation .m-0 { margin: 0 !important; }
+.alfred-landing-isolation .m-1 { margin: 0 !important; }
+.alfred-landing-isolation .m-2 { margin: 0 !important; }
+.alfred-landing-isolation .m-3 { margin: 0 !important; }
+.alfred-landing-isolation .m-4 { margin: 0 !important; }
+.alfred-landing-isolation .m-5 { margin: 0 !important; }
+.alfred-landing-isolation .m-6 { margin: 0 !important; }
+.alfred-landing-isolation .m-8 { margin: 0 !important; }
+.alfred-landing-isolation .m-10 { margin: 0 !important; }
+.alfred-landing-isolation .m-12 { margin: 0 !important; }
+.alfred-landing-isolation .m-16 { margin: 0 !important; }
+.alfred-landing-isolation .m-20 { margin: 0 !important; }
+.alfred-landing-isolation .m-24 { margin: 0 !important; }
+.alfred-landing-isolation .m-32 { margin: 0 !important; }
+
+.alfred-landing-isolation .flex { display: block !important; }
+.alfred-landing-isolation .inline-flex { display: inline-block !important; }
+.alfred-landing-isolation .grid { display: block !important; }
+.alfred-landing-isolation .hidden { display: block !important; }
+.alfred-landing-isolation .block { display: block !important; }
+.alfred-landing-isolation .inline-block { display: inline-block !important; }
+.alfred-landing-isolation .inline { display: inline !important; }
+.alfred-landing-isolation .table { display: table !important; }
+.alfred-landing-isolation .table-cell { display: table-cell !important; }
+.alfred-landing-isolation .table-row { display: table-row !important; }

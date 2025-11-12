@@ -1,0 +1,297 @@
+/* Retention Success Popup Overlay */
+.retention-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Retention Success Container */
+.retention-success-container {
+  background: white;
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 96vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: retentionSuccessZoomIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Close Button */
+.retention-success-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  color: #6B7280;
+  transition: all 0.2s ease;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.retention-success-close:hover {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+/* Decorative Elements */
+.retention-success-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+/* Success Icon */
+.retention-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.retention-success-icon svg {
+  width: 70px;
+  height: 70px;
+  animation: successCelebration 1.5s ease-out;
+}
+
+@keyframes successCelebration {
+  0% {
+    transform: scale(0.3) rotate(-10deg);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1.2) rotate(5deg);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(0.9) rotate(-2deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(1deg);
+  }
+  80% {
+    transform: scale(0.95) rotate(-0.5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Header Section */
+.retention-success-header {
+  text-align: center;
+  margin-bottom: 24px;
+  z-index: 2;
+  position: relative;
+}
+
+.retention-success-title {
+  font-size: 19px !important;
+  font-weight: 700;
+  color: #022C33;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.retention-success-subtitle {
+ font-size: 14px;
+  color: #585858;
+  margin: 0;
+  line-height: 1.4;
+}
+.retention-success-description {
+  font-size: 14px;
+  color: #585858;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+}
+
+/* Offer Details Box */
+.retention-success-offer-box {
+  background: #E8FFE8;
+  border: 1px solid #cfecdc00;
+  border-radius: 10px;
+  padding: 25px 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+  letter-spacing: 0.4px;
+}
+
+.retention-success-offer-text {
+  font-size: 14px;
+  color: #0B5527;
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.retention-success-highlight {
+  font-weight: 700;
+  color: #2AA12A;
+   font-size: 18px;
+}
+
+.retention-success-offer-note {
+  font-size: 12px;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Action Buttons */
+.retention-success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.retention-success-dashboard-btn {
+background: linear-gradient(90deg, #7DDD7D 0%, #54C754 99.99%);
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.retention-success-dashboard-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(58, 191, 98, 0.3);
+}
+
+.retention-success-features-btn {
+  background: white;
+  color: #60CD60;
+  border: 1px solid #60CD60;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.retention-success-features-btn:hover {
+  background: #F0FDF4;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(58, 191, 98, 0.1);
+}
+
+/* Additional Info */
+.retention-success-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.retention-success-info p{
+  font-size: 14px;
+  color: #585858;
+  text-align: center;
+  line-height: 1.3;
+  z-index: 2;
+  position: relative;
+}
+/* Popup Zoom In Animation */
+@keyframes retentionSuccessZoomIn {
+  0% {
+    transform: scale(0.3) translateY(50px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) translateY(-10px);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(0.98) translateY(5px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .retention-success-container {
+    padding: 24px 20px;
+    margin: 10px;
+  }
+
+  .retention-success-title {
+    font-size: 20px;
+  }
+
+  .retention-success-subtitle {
+    font-size: 16px;
+  }
+
+  .retention-success-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retention-success-overlay {
+    padding: 10px;
+  }
+
+  .retention-success-container {
+    padding: 20px 16px;
+  }
+
+  .retention-success-title {
+    font-size: 18px;
+  }
+
+  .retention-success-subtitle {
+    font-size: 14px;
+  }
+
+  .retention-success-description {
+    font-size: 11px;
+  }
+
+  .retention-success-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}

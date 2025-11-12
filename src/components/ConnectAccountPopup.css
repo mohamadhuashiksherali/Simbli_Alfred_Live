@@ -1,0 +1,212 @@
+/* Connect Account Popup Custom Styles */
+.connect-account-popup { 
+  background: #FFFFFF !important; 
+  border: 1px solid #E5E7EB !important; 
+  border-radius: 14px !important; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+  color: #374151 !important;
+  padding-top: 22px !important;
+  min-height: 240px !important;
+  font-size: 16px !important;
+  max-width: 460px !important;
+}
+
+/* Custom Icon Styling */
+.connect-account-icon {
+  width: 60px !important;
+  height: 60px !important;
+  margin: 0 auto 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #CFF3DE !important;
+  border-radius: 50% !important;
+  border: none !important;
+}
+
+.connect-account-icon svg {
+  width: 86px !important;
+  height: 86px !important;
+}
+
+.connect-account-icon svg circle {
+  fill: #CFF3DE !important;
+}
+
+.connect-account-icon svg path {
+  stroke: #26AE26 !important;
+  fill: none !important;
+}
+
+/* Override SweetAlert default icon */
+.connect-account-popup .swal2-icon {
+  border: none !important;
+  background: transparent !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.connect-account-popup .swal2-icon::before {
+  display: none !important;
+}
+
+.connect-account-popup .swal2-icon::after {
+  display: none !important;
+}
+
+.connect-account-popup .swal2-html-container {
+  font-size: 17px !important;
+  color: #666 !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+.connect-account-popup .swal2-html-container { 
+  color: #222222 !important; 
+  font-weight: 400; 
+  font-size: 14px !important;
+}
+
+.connect-account-popup .swal2-actions { 
+  gap: 12px !important; 
+}
+
+.connect-account-confirm-btn { 
+  background: linear-gradient(180deg, #7EDD7E 0%, #57C957 100%) !important; 
+  color: #021E22 !important; 
+  border: none !important; 
+  border-radius: 12px !important; 
+  padding: 10px 28px !important;
+  min-width: 160px !important;
+  justify-content: center !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+.connect-account-cancel-btn { 
+  background: #EAEAEA !important; 
+  color: #021E22 !important; 
+  border: none !important; 
+  border-radius: 12px !important; 
+  padding: 10px 28px !important;
+  min-width: 160px !important;
+  justify-content: center !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+/* Hover effects */
+.connect-account-confirm-btn:hover {
+  background: linear-gradient(180deg, #6BC96B 0%, #4BB84B 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.connect-account-cancel-btn:hover {
+  background: #D5D5D5 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Focus states */
+.connect-account-confirm-btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(126, 221, 126, 0.3) !important;
+}
+
+.connect-account-cancel-btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(234, 234, 234, 0.5) !important;
+}
+
+/* Active states */
+.connect-account-confirm-btn:active {
+  transform: translateY(0) !important;
+  background: linear-gradient(180deg, #5BC55B 0%, #3BA83B 100%) !important;
+}
+
+.connect-account-cancel-btn:active {
+  transform: translateY(0) !important;
+  background: #C5C5C5 !important;
+}
+
+/* Icon container styling */
+.connect-account-popup .swal2-icon {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Close button styling */
+.connect-account-close-btn {
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  width: 30px !important;
+  height: 30px !important;
+  background: #F3F4F6 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  z-index: 10 !important;
+}
+
+.connect-account-close-btn:hover {
+  background: #E5E7EB !important;
+  transform: scale(1.1) !important;
+}
+
+.connect-account-close-btn:active {
+  transform: scale(0.95) !important;
+}
+
+.connect-account-close-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #6B7280 !important;
+}
+
+.connect-account-close-btn:hover svg {
+  color: #374151 !important;
+}
+
+/* Ensure popup has relative positioning for absolute close button */
+.connect-account-popup {
+  position: relative !important;
+}
+
+/* Additional overrides to ensure custom icon displays */
+.connect-account-popup .swal2-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.connect-account-popup .swal2-title > * {
+  margin: 0 !important;
+}
+
+/* Hide any default SweetAlert icons */
+.connect-account-popup .swal2-icon.swal2-question,
+.connect-account-popup .swal2-icon.swal2-warning,
+.connect-account-popup .swal2-icon.swal2-info,
+.connect-account-popup .swal2-icon.swal2-success,
+.connect-account-popup .swal2-icon.swal2-error {
+  display: none !important;
+}
+
+/* Message styling */
+.connect-account-message {
+  font-size: 17px !important;
+  color: #424242 !important;
+  line-height: 1.5 !important;
+  margin: 1rem 0 !important;
+  text-align: center !important;
+  padding: 0 1rem !important;
+}

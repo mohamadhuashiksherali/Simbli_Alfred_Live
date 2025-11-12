@@ -1,0 +1,222 @@
+/* Onboard page specific styles */
+.onboard-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #173E44;
+}
+
+.onboard-subtitle {
+    font-size: 13px;
+    color: #424242e7;
+}
+
+.email-display {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.text-share-img img {
+    width: 50px;
+    height: 50px;
+}
+
+.text-share {
+    display: flex;
+}
+
+.email-box {
+    background: #E9FCFF;
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #173E44;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.email-box svg {
+    color: #173E44;
+    width:17px;
+    height:17px;
+    object-fit: contain;
+}
+
+.social-card {
+    border-radius: 12px;
+    padding: 35px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.socs1{
+    background-color: #F2F8FF;
+}
+.socs2{
+    background: #F4F9FE;
+
+}
+.socs3{
+    background-color: #FEF4F9;
+}
+.socs4{
+    background-color: #F4F7FE;
+}
+.social-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.social-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+
+
+.social-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: #022C33;
+    margin-bottom: 16px;
+    margin-top: 5px;
+}
+
+.onboard-btn {
+   background: #84E084;
+    color: #021E22;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 10px;
+    width: 80%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.onboard-btn:disabled {
+    background: #E0E0E0;
+    color: #9E9E9E;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.onboard-btn.coming-soon {
+    background: #E0E0E0;
+    color: #9E9E9E;
+}
+
+/* Connection Status Styles */
+.socs-connected {
+    background-color: #E8F5E8 !important;
+    border: 2px solid #4CAF50;
+}
+
+.connection-status {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-dot.connected {
+    background-color: #4CAF50;
+}
+
+.status-dot.disconnected {
+    background-color: #F44336;
+}
+
+.status-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+}
+
+.account-info {
+    margin-top: 8px;
+}
+
+.account-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #022C33;
+    margin: 0;
+}
+
+.account-status {
+    font-size: 10px;
+    color: #4CAF50;
+    margin: 2px 0 0 0;
+}
+
+.onboard-btn.connected {
+    background: #4CAF50;
+    color: white;
+    cursor: default;
+}
+
+.onboard-btn.connected:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .onboard-title {
+        font-size: 24px;
+    }
+    .social-name {
+    font-size: 15px;
+}
+    .onboard-subtitle {
+        font-size: 14px;
+    }
+    
+    .social-card {
+        padding: 16px 12px;
+    }
+    
+    .social-icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .onboard-btn {
+    background: #84E084;
+    color: #021E22;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    padding: 5px 10px;
+    width: 80%;
+
+}
+   
+}

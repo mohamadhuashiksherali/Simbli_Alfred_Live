@@ -1,0 +1,468 @@
+.billing-page {
+  /* max-width: 1100px; */
+  margin: 0 auto;
+  padding:0px 2rem;
+}
+.Billing_Header{
+  display: unset !important;
+  background-color: transparent !important;
+  box-shadow: none  !important;
+  border: none !important;
+}
+.Billing_Header h1{
+  font-size: 22px !important;
+  color: #000000;
+  font-weight: 600;
+}
+.Billing_Header p{
+  color: #212121;
+  font-size: 15px;
+  font-weight: 400;
+}
+.billing-headers h1 {
+  font-size: 19px !important;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+}
+.billing-headers p {
+  margin: 8px 0 16px;
+  color: #212121;
+  font-size: 14px;
+}
+.billing-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: #E4E4E4;
+  padding: 4px !important;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.billing-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.toggle-btn.active {
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.toggle-btn:hover:not(.active) {
+  color: #333;
+}
+
+.save-badge {
+  background: #28a745;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+.billing-toggle.navtabs {
+  border-radius: 12px;
+}
+.billing-toggle .tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #212121;
+  cursor: pointer;
+  line-height: 1;
+}
+.billing-toggle .tab.active {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  border-color: #e5e7eb;
+  font-weight: 500 !important;
+}
+.billing-toggle .tab:hover {
+  background: #ffffff;
+  border-color: #e5e7eb;
+}
+.badge-inline {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  color: #111827;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 12px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  /* margin-top: 20px; */
+}
+.plan-card {
+  background: #fff;
+  border: 1px solid #EDEDED;
+  border-radius: 12px;
+  box-shadow: 0px 4px 30px 0px #C0C0C040;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.plan-card:hover {
+  border-color: #74DF74;
+  box-shadow: 0px 4px 30px 0px #C0C0C040;
+  background: linear-gradient(180deg, #F1FEF0 0%, #FFFFFF 100%);
+
+
+}
+.plan-card.plan-popular {
+  border-color: #74DF74;
+ box-shadow: 0px 4px 30px 0px #C0C0C040;
+   background: linear-gradient(180deg, #F1FEF0 0%, #FFFFFF 100%);
+
+}
+.plan-head {
+  padding: 3px;
+}
+.plan-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height:40px;
+}
+.badge-popular {
+  background:#FF7E22;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+.price {
+  font-size: 22px;
+  color: #212121;
+  font-weight: 700 !important;
+  margin-top: 4px;
+}
+.price span {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+}
+.subtitle {
+  color: #212121;
+  font-size: 13px;
+  margin: 4px 0 12px;
+  height: 42px;
+}
+.get-started {
+  width: 100%;
+  background: #74DF74;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  height: 44px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.get-started:hover {
+  background: #74DF74;
+}
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+}
+.plan-body {
+  padding: 12px 16px 16px;
+}
+.features-title {
+  font-size: 15px;
+  color: #1F1F21;
+  font-weight: 700 !important;
+  margin-bottom: 8px;
+}
+.every-thing{
+  color:#767676;
+  font-size: 14px;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.feature-list li {
+  position: relative;
+  /* padding-left: 28px; */
+  list-style: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #525252;
+}
+/* 
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 19px;
+  background-image: url("../assets/tick-al.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent; 
+} */
+
+
+.coupon-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin: 24px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.coupon-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  max-width: 450px;
+  width: 100%;
+  height:46px;
+}
+.coupon-input .icon {
+  opacity: 0.6;
+}
+.coupon-input input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 14px;
+}
+.btn-apply {
+  background: #74DF74;
+  color: #000000;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 0 18px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 16px;
+  height:45px;
+}
+.btn-apply:hover {
+  background: #74DF74;
+}
+
+.addons {
+  margin-top: 12px;
+}
+.addons h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px !important;
+  color: #2A2A2A;
+  margin: 8px 0 16px;
+}
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.addon-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  text-align: center;
+}
+.addon-price {
+  font-size: 25px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.buy-token {
+  background:#74DF74;
+  color: #000000;
+  border: 0;
+  height: 44px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buy-token:hover {
+  background: #74DF74;
+}
+
+.billing-notes {
+  margin-top: 16px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 12px;
+}
+.note-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.note.success {
+  color: #737373;
+}
+.note.error {
+  color: #737373;
+}
+.addon-card .addon-price {
+  font-size: 25px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: unset;
+}
+.contact-sales {
+  color: #46AD46;
+  font-weight: 700;
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px !important;  /* optional: control thickness */
+  text-underline-offset: 4px;  
+}
+
+
+.contact-sales:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .plans-grid,
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width:450px){
+  .Billing_Header h1{
+    font-size: 20px !important;
+  }
+}
+.swal-btn-text-black {
+  color: #000 !important;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.swal2-show{
+  border-radius: 15px;
+}
+div:where(.swal2-icon).swal2-question{
+  display: none !important;
+}
+.Mange_Plan{
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDED;
+  border-radius: 10px;
+}
+.Current_plan{
+  color: #44464C;
+  font-size: 18px;
+  font-weight: 600;
+}
+.Next_Renewal{
+  color: #767676;
+  font-size: 14px;
+}
+.Manage_btn{
+  background-color: #84E084 !important;
+  color: #000000 !important;
+  font-size: 13px;
+}
+.Cancel_Subscription{
+  font-size: 13px;
+
+  background-color: #FFE9E9 !important;
+  color: #FF0000  !important;
+}
+.swal2-cancel{
+  background-color: #EAEAEA !important;
+  color: #021E22;
+  font-size: 13px;
+  padding: 8px 20px;
+
+}
+.swal2-confirm {
+    background-color: #84E084 !important;
+    color: #021E22;
+    font-size: 13px;
+    padding: 11px 57px;
+    border-radius: 9px;
+}
+.swal2_title_Cancel{
+  color: #173E44 !important;
+  font-size: 21px !important;
+  font-weight: 600;
+}
+.Cancel_Remain{
+  color: #424242;
+  font-size: 15px;
+  /* padding: 0px 58px; */
+}
+.line_popup{
+  background-color: #C7C7C7;
+  height: 1px;
+}
+.Change_Plan_popup{
+  color: #1D1D1D;
+  font-size: 16px;
+}
+.swal2-popup-custom{
+  max-width: 450px !important;
+}
+div:where(.swal2-icon){
+  border: 0px !important;
+}
+.swal2-popup-custom .swal2-html-container{
+  padding: 0px;
+}

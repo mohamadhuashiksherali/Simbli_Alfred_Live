@@ -1,0 +1,84 @@
+/* Typography Styles - Standard Font Sizes */
+/* Headings: 23px | All other text: 15px */
+
+/* Heading Elements - 23px */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 19px !important;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 0px 0;
+  /* color: #173E44; */
+}
+
+/* Standard Text Elements - 15px */
+p, span, div, a, li, td, th, label, input, textarea, button {
+  font-size: 15px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  /* color: #424242; */
+}
+
+/* Specific text elements that should be 15px */
+.typography-text,
+.typography-body,
+.typography-standard,
+.text-content,
+.content-text,
+.body-text {
+  font-size: 15px !important;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  /* color: #424242; */
+}
+
+/* Heading utility classes - 23px */
+.typography-heading,
+.heading-text,
+.title-text,
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  font-size: 23px !important;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  /* color: #173E44; */
+}
+
+/* Utility classes for quick application */
+.text-heading {
+  font-size: 23px !important;
+  font-weight: 600 !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+.text-standard {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6,
+  .typography-heading,
+  .heading-text,
+  .title-text,
+  .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+    font-size: 20px !important;
+  }
+  
+  p, span, div, a, li, td, th, label, input, textarea, button,
+  .typography-text,
+  .typography-body,
+  .typography-standard,
+  .text-content,
+  .content-text,
+  .body-text {
+    font-size: 14px !important;
+  }
+}
+.leading-tesx{
+  font-weight: 600 !important;
+}

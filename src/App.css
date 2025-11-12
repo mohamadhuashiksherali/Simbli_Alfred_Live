@@ -1,0 +1,81 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* .dashboard-pin{
+  background-color: #ffff !important;
+  border: 1px solid #EDEDED;
+  border-radius: 9px;
+} */
+body {
+  background-color: transparent !important;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgb(82, 82, 82);
+}
+.welcome-gradient {
+  background: linear-gradient(90deg, #52bc53 0%, #97db97 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-size: 30px !important;
+}
+.write-anal {
+  font-size: 19px !important;
+}
+.write-analys{
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+.text-round-file {
+  border-radius: 50% !important;
+}
+@media (max-width: 400px) {
+  .linkedin-palt {
+    border-radius: 29px !important;
+    padding: 6px 7px !important;
+  }
+  .button-sends-1 {
+    border-radius: 4px;
+    padding: 5px 5px;
+  }
+}
+.button-sends-1 {
+  border-radius: 4px;
+  padding: 0px 5px;
+}
+.unchane-times {
+  border-radius: 9px !important;
+}
+div:where(.swal2-container) h2:where(.swal2-title) {
+  
+    font-size: 18px !important;
+    font-weight: 500;
+    color:#222222 !important;
+
+}
+.head-conversational{
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1F1F1F !important;
+}
+
+
+
+/* Add translate effect to all buttons except nav tab pane buttons */
+button:not([class*="navigation"]):not([class*="nav"]):not([class*="sidebar"]) {
+  transition: transform 0.2s ease;
+}
+
+button:not([class*="navigation"]):not([class*="nav"]):not([class*="sidebar"]):hover {
+  transform: translateY(-1px);
+}
+
+button:not([class*="navigation"]):not([class*="nav"]):not([class*="sidebar"]):active {
+  transform: translateY(0);
+}

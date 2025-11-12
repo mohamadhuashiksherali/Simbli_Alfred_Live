@@ -1,0 +1,937 @@
+/* Main Wrapper */
+.exact-profile-wrapper {
+  position: relative;
+  width: 100%;
+
+
+}
+
+/* Profile Open Button - Top Right */
+.exact-profile-open-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #10B981;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  z-index: 10;
+}
+
+.exact-profile-open-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Profile Modal Overlay */
+.exact-profile-overlay-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.089);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 1000;
+  padding: 60px 20px 20px 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Profile Popup Box */
+.exact-profile-popup-box {
+  background: #FFFFFF;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #EDEDED;
+}
+
+/* Close Icon */
+.exact-profile-close-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.exact-profile-close-icon:hover {
+  background-color: #f3f4f6;
+}
+
+/* Main Title */
+.exact-profile-main-title {
+  color: #022C33;
+  font-size: 20px !important;
+  font-weight: 600;
+  margin: 0;
+  padding: 24px 20px 20px 20px;
+  
+}
+
+/* Layout Grid */
+.exact-profile-layout-grid {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  height: auto;
+}
+
+/* Sidebar Menu */
+.exact-profile-sidebar-menu {
+  width: 250px;
+  padding: 0px 10px 0px 20px ;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.exact-profile-sidebar-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.exact-profile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+  color: #022C33;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+/* .exact-profile-menu-item:hover {
+  background-color: #c6ffe7;
+  color: #374151;
+} */
+
+.exact-profile-menu-item-selected {
+  background: #E8FFEB;
+  color: #099940;
+  font-weight: 600;
+  /* margin: 0 8px; */
+
+  border-radius: 8px;
+}
+
+.exact-profile-menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.exact-profile-menu-text {
+  font-size: 15px;
+  
+}
+
+/* Main Content Area */
+.exact-profile-main-content {
+  flex: 1;
+  padding: 25px 40px 25px 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  height: auto;
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.exact-profile-main-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Content Section */
+.exact-profile-content-section {
+  display: flex;
+  gap: 20px;
+  padding: 0px 98px 0px 28px;
+  align-items: center;
+  border-radius: 13px;
+  flex: 1;
+  background-color: #F4F4F4;
+  border: 1px solid #EDEDED;
+  height: auto;
+  min-height: 270px;
+}
+
+/* Profile Picture Wrapper */
+.exact-profile-picture-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.exact-profile-picture-frame {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.exact-profile-picture-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.exact-profile-edit-icon-btn {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #099940;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease;
+}
+
+.exact-profile-edit-icon-btn:hover {
+  background: #059635;
+}
+
+/* Profile Fields Container */
+.exact-profile-fields-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exact-profile-field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exact-profile-field-title {
+  color: #2A2A2A;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.exact-profile-field-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.exact-profile-field-icon {
+  position: absolute;
+  left: 12px;
+  z-index: 1;
+}
+
+.exact-profile-field-input {
+  width: 100%;
+  padding: 6px 10px 6px 38px;
+  border: 1px solid #EDEDED;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #000000;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  height: 40px;
+}
+
+.exact-profile-field-input:focus {
+  outline: none;
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Buttons Row */
+.exact-profile-buttons-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Edit Text Button */
+.exact-profile-edit-text-btn {
+  background: none;
+  color: #8D8D8D;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.exact-profile-edit-text-btn:hover {
+  color: #6b7280;
+}
+
+/* Update Main Button */
+.exact-profile-update-main-btn {
+ 
+  border-radius: 5px;
+  height: 35px;
+  width: 130px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  background: #2FB130;
+  color: #FFFFFF;
+}
+.Edit_Icon{
+  font-size: 13px;
+}
+.exact-profile-update-main-btn:hover {
+ 
+  transform: translateY(-1px);
+  
+}
+
+/* Security Section */
+.exact-profile-security-section {
+  display: flex;
+  flex-direction: column;
+  border:1px solid #EDEDED;
+  gap: 20px;
+  padding: 35px 100px 20px 28px;
+  background: #F4F4F4;
+  border-radius: 15px;
+  flex: 1;
+  min-height: 280px;
+}
+
+.exact-profile-auth-heading {
+  color: #022C33;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+/* Google Signin Box */
+.exact-profile-google-signin-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 1px solid #EDEDED;
+  border-radius: 9px;
+  background: #FFFFFF;
+  width: 100%;
+}
+
+.exact-profile-google-g-icon {
+  width: 22px;
+  height: 22px;
+  background: #4285f4;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.exact-profile-google-email-text {
+  color: #374151;
+  font-size: 13px;
+}
+
+.exact-profile-change-password-link {
+  color: #FF4400;
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+
+
+.exact-profile-shield-icon {
+  margin-left: 2px;
+}
+
+/* Delete My Account Button */
+.exact-profile-delete-my-account-btn {
+  background: #EF4444;
+  color: white;
+  border: none;
+  height: 35px;
+  width: 170px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 4px;
+ 
+}
+
+.exact-profile-delete-my-account-btn:hover {
+  background: #d12e2e;
+}
+
+/* Delete View */
+.exact-profile-delete-view {
+  display: flex;
+  /* flex-direction: column; */
+  height: 100%;
+  gap: 19px;
+  border-radius: 16px;
+ align-items: start;
+  background: #f9fafb;
+  padding: 30px 20px;
+}
+
+/* Back Button */
+.exact-profile-back-button {
+  /* position: absolute;
+  top: 24px;
+  left: 24px; */
+  width: 34px;
+  height: 34px;
+  background-color: #fff;
+  /* border: 1px solid #e5e7eb; */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  transition: all 0.2s ease;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+  z-index: 10;
+}
+
+
+
+/* Delete Panel */
+.exact-profile-delete-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  flex: 1;
+  padding-top: 5px;
+  /* padding: 70px 32px 32px 32px; */
+}
+
+/* Delete Title */
+.exact-profile-delete-title {
+  color: #022C33;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+/* Delete Subtitle */
+.exact-profile-delete-subtitle {
+  color: #3D3D3D;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+  /* max-width: 480px; */
+}
+.acknowledge_Font{
+  font-size: 13px;
+  color: #0D0D0D;
+  margin-bottom: 6px;
+}
+
+/* Checkbox Container */
+.exact-profile-checkbox-container {
+  width: 100%;
+  margin-bottom: 28px;
+  background-color: #FFF6F6;
+  border: 1px solid #FFCCCC;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.exact-profile-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  max-width: 480px;
+}
+
+.exact-profile-checkbox-tick {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color:#099940;
+}
+
+.exact-profile-checkbox-description {
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Delete Button Group */
+.exact-profile-delete-button-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Confirm Delete Button */
+.exact-profile-confirm-delete-btn {
+  background: #EF4444;
+  color: white;
+  border: none;
+  height: 35px;
+  width: 160px;
+  /* padding: 9px 18px; */
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 170px;
+}
+
+.exact-profile-confirm-delete-btn:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.exact-profile-confirm-delete-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Cancel Action Button */
+.exact-profile-cancel-action-btn {
+  background: #EAEAEA;
+  color: #6b7280;
+  /* border: 1px solid #d1d5db; */
+  height: 35px;
+  width: 90px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.exact-profile-cancel-action-btn:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+/* Placeholder Content */
+.exact-profile-placeholder-title {
+  color: #1f2937;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.exact-profile-placeholder-text {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exact-profile-overlay-backdrop {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .exact-profile-popup-box {
+    max-width: 100%;
+    max-height: 95vh;
+    height: auto;
+    margin: 0;
+  }
+  
+  .exact-profile-layout-grid {
+    flex-direction: column;
+  }
+  
+  .exact-profile-sidebar-menu {
+    width: 100%;
+    max-height: 150px;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .exact-profile-menu-item {
+    padding: 10px 14px;
+  }
+  
+  .exact-profile-content-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+  }
+  
+  .exact-profile-fields-container {
+    width: 100%;
+  }
+  
+  .exact-profile-buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .exact-profile-update-main-btn,
+  .exact-profile-edit-text-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .exact-profile-open-btn {
+    top: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .exact-profile-delete-panel {
+    padding: 60px 20px 20px 20px;
+  }
+}
+.Profile_Background{
+  /* padding: 32px 28px; */
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+
+}
+.Authentication_pass{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Goggle_Icon{
+  height: 20px;
+}
+
+/* Change Password View */
+.exact-profile-change-password-view {
+  display: flex;
+  height: 100%;
+  gap: 19px;
+  border-radius: 16px;
+  align-items: start;
+  background: #f9fafb;
+  padding: 30px 20px;
+}
+
+/* Password Form Specific Styles */
+.password-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 5px 5px;
+  border-radius: 16px;
+  flex: 1;
+  height: auto;
+  min-height: 300px;
+}
+
+.password-field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.password-field-title {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.password-field-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-field-icon {
+  position: absolute;
+  left: 12px;
+  z-index: 2;
+  color: #6B7280;
+}
+
+.password-field-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111827;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  height: 40px;
+}
+
+.password-field-input:focus {
+  outline: none;
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.password-field-input:hover {
+  border-color: #9CA3AF;
+}
+
+.password-field-input.error {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  text-align: left !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: #6B7280;
+  transition: color 0.2s ease;
+  z-index: 3;
+}
+
+.password-toggle-btn:hover {
+  color: #374151;
+}
+
+.password-error-message {
+  color: #EF4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Change Password Panel */
+.exact-profile-change-password-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  flex: 1;
+  padding-top: 5px;
+}
+
+/* Change Password Title */
+.exact-profile-change-password-title {
+  color: #022C33;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+/* Change Password Subtitle */
+.exact-profile-change-password-subtitle {
+  color: #3D3D3D;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+}
+
+/* Password Form */
+.exact-profile-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+/* Password Buttons Row */
+.exact-profile-password-buttons-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+/* Cancel Password Button */
+.exact-profile-cancel-password-btn {
+  background: #EAEAEA;
+  color: #6b7280;
+  height: 35px;
+  width: 90px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+  border: none;
+}
+
+.exact-profile-cancel-password-btn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Error Message */
+.error-message {
+  color: #EF4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Input Error State */
+.exact-profile-field-input.error {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  text-align: left !important;
+}
+.loading, .error{margin-top: 0px !important;}
+
+/* Readonly Input State */
+.exact-profile-field-input.readonly {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Snackbar Styles */
+.snackbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  z-index: 10000;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideInRight 0.3s ease-out;
+}
+
+.snackbar.success {
+  background: #10B981;
+}
+
+.snackbar.error {
+  background: #EF4444;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

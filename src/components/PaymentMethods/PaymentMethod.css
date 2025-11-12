@@ -1,0 +1,390 @@
+/* Payment Method Container */
+.payment-method-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+
+}
+
+/* Header Section */
+.payment-method-header {
+  margin-bottom: 24px;
+}
+
+.payment-method-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Main Card */
+.payment-method-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Manage Payment Information Banner */
+.manage-payment-banner {
+  background-color: #53c753;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px 12px 0 0;
+}
+
+.banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Credit Card Section */
+.credit-card-section {
+  padding: 24px 20px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.visa-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 24px;
+  background-color: #1a1f71;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.card-number {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-type {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.card-digits {
+  font-size: 14px;
+  color: #6b7280;
+
+}
+
+.expiry-date {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.update-card-btn {
+  background-color: #f0fdf4;
+  color: #22c55e;
+  border: 1px solid #bcedbc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* Trial Period Information Section */
+.trial-info-section {
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin: 0 20px 20px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.trial-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.trial-content {
+  flex: 1;
+}
+
+.trial-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.trial-description {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-method-container {
+    padding: 16px;
+  }
+
+  .payment-method-title {
+    font-size: 24px;
+  }
+
+  .manage-payment-banner {
+    padding: 14px 16px;
+  }
+
+  .banner-text {
+    font-size: 13px;
+  }
+
+  .credit-card-section {
+    padding: 20px 16px;
+  }
+
+  .card-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .card-details {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .update-card-btn {
+    align-self: flex-end;
+  }
+
+  .trial-info-section {
+    margin: 0 16px 16px 16px;
+    padding: 16px;
+  }
+
+  .trial-title {
+    font-size: 15px;
+  }
+
+  .trial-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-method-container {
+    padding: 12px;
+  }
+
+  .payment-method-title {
+    font-size: 20px;
+  }
+
+  .manage-payment-banner {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .banner-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .banner-text {
+    font-size: 12px;
+  }
+
+  .credit-card-section {
+    padding: 16px 14px;
+  }
+
+  .card-details {
+    gap: 12px;
+  }
+
+  .visa-logo {
+    width: 36px;
+    height: 22px;
+  }
+
+  .card-type {
+    font-size: 15px;
+  }
+
+  .card-digits,
+  .expiry-date {
+    font-size: 13px;
+  }
+
+  .update-card-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .update-card-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .trial-info-section {
+    margin: 0 14px 14px 14px;
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .trial-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .trial-title {
+    font-size: 14px;
+  }
+
+  .trial-description {
+    font-size: 12px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .payment-method-container {
+    background-color: white;
+    padding: 0;
+  }
+
+  .payment-method-card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+
+  .update-card-btn {
+    display: none;
+  }
+}
+.Payment_Bg {
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  height: 70vh !important;
+  height: 100%;
+  border-radius: 16px;
+}
+
+/* Subscription Active CSS */
+
+.Subscription_Active {
+  color: #1f6534;
+  font-size: 16px;
+  font-weight: 600;
+}
+.Subscription_scheduled {
+  color: #1f6534;
+  font-size: 15px;
+}
+.Subscription_Section {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 20px;
+  margin: 0 20px 20px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Subscription DeActive */
+
+.manage_payment_banner_Deactive {
+  background-color: #ea4040;
+
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px 12px 0 0;
+}
+.update-card-btn_deActive {
+  border: 1px solid #edbcbc;
+  background-color: #ffe6e6;
+  color: #dc2626;
+
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.Subscription_Section_Deactive {
+  border: 1px solid #fecaca;
+  background-color: #fef2f2;
+
+  padding: 20px;
+  margin: 0 20px 20px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.Subscription_DeActive {
+  color: #991b1b;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+.Subscription_scheduled_Deactive {
+  color: #991b1b;
+
+  font-size: 15px;
+}
+@media (max-width: 600px) {
+  .update-card-btn_deActive {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,227 @@
+/* Delete Draft Modal Styles */
+.delete-draft-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  animation: deleteDraftModalFadeIn 0.2s ease-out;
+}
+
+@keyframes deleteDraftModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delete-draft-modal-container {
+  background: white !important;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: deleteDraftModalSlideIn 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes deleteDraftModalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.delete-draft-modal-content {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.delete-draft-modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.delete-draft-modal-close-btn:hover {
+  color: #495057;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.delete-draft-modal-close-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-draft-modal-icon {
+  margin-bottom: 1rem;
+  color: #E63D4E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-draft-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #E63D4E !important;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.delete-draft-modal-message {
+  font-size: 1rem;
+  color: #515151 !important;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.delete-draft-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.delete-draft-modal-cancel-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  background: #EAEAEA;
+  color: #021E22;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+
+
+.delete-draft-modal-confirm-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  background: #84E084;
+  color: #021E22;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+
+.delete-draft-modal-confirm-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.delete-draft-modal-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: deleteDraftModalSpin 1s linear infinite;
+}
+
+@keyframes deleteDraftModalSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .delete-draft-modal-container {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .delete-draft-modal-content {
+    padding: 1.5rem;
+  }
+  
+  .delete-draft-modal-title {
+    font-size: 1.25rem;
+  }
+  
+  .delete-draft-modal-message {
+    font-size: 0.9rem;
+  }
+  
+  .delete-draft-modal-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .delete-draft-modal-cancel-btn,
+  .delete-draft-modal-confirm-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .delete-draft-modal-container {
+    background: #1f2937;
+    color: white;
+  }
+  
+  .delete-draft-modal-title {
+    color: #f9fafb;
+  }
+  
+  .delete-draft-modal-message {
+    color: #d1d5db;
+  }
+  
+  .delete-draft-modal-close-btn {
+    color: #9ca3af;
+  }
+  
+  .delete-draft-modal-close-btn:hover {
+    color: #f3f4f6;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

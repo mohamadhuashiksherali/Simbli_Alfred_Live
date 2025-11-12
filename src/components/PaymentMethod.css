@@ -1,0 +1,331 @@
+.payment-method-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.payment-method-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.payment-method-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Banner */
+.payment-header-banner {
+  background: #dc3545;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Payment Methods Section */
+.payment-methods-section {
+  padding: 20px;
+}
+
+.payment-method-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background: #f8f9fa;
+}
+
+.payment-method-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-brand {
+  width: 60px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-brand.visa {
+  background: #1a1f71;
+}
+
+.card-brand.mastercard {
+  background: #eb001b;
+}
+
+.card-brand.default {
+  background: #6c757d;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-number {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.card-expiry {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.update-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: white;
+  border: 1px solid #dc3545;
+  border-radius: 6px;
+  color: #dc3545;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.update-card-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* No Payment Method State */
+.no-payment-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.no-payment-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  margin-right: 20px;
+}
+
+.no-payment-text {
+  flex: 1;
+  text-align: left;
+}
+
+.no-payment-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 5px;
+}
+
+.no-payment-subtitle {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.add-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: white;
+  border: 1px solid #28a745;
+  border-radius: 6px;
+  color: #28a745;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-card-btn:hover {
+  background: #28a745;
+  color: white;
+}
+
+.add-card-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Add Card Section (when methods exist) */
+.add-card-section {
+  padding: 20px;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.add-card-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: white;
+  border: 1px solid #dc3545;
+  border-radius: 6px;
+  color: #dc3545;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-card-btn-secondary:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.add-card-btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Subscription Status */
+.subscription-status {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.subscription-status.active {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.subscription-status.inactive {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.subscription-status.active .status-icon {
+  color: #155724;
+}
+
+.subscription-status.inactive .status-icon {
+  color: #721c24;
+}
+
+.status-info {
+  flex: 1;
+}
+
+.status-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subscription-status.active .status-title {
+  color: #155724;
+}
+
+.subscription-status.inactive .status-title {
+  color: #721c24;
+}
+
+.status-details {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.subscription-status.active .status-details {
+  color: #155724;
+}
+
+.subscription-status.inactive .status-details {
+  color: #721c24;
+}
+
+/* Loading and Error States */
+.loading-message {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.error-message {
+  text-align: center;
+  padding: 40px;
+  color: #dc3545;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-method-container {
+    padding: 15px;
+  }
+  
+  .payment-method-title {
+    font-size: 1.5rem;
+  }
+  
+  .payment-method-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .no-payment-method {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .no-payment-text {
+    text-align: center;
+  }
+  
+  .subscription-status {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
